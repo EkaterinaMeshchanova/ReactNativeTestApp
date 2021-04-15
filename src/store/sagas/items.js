@@ -6,7 +6,7 @@ import {
 } from 'redux-saga/effects';
 import axios from 'axios';
 
-import actions from '../actions/itemsActions';
+import actions from '../actions/items';
 const sortId = (a, b) => b.id - a.id;
 
 const {

@@ -7,12 +7,13 @@ import {
   Text,
   View,
 } from 'react-native';
-import actions from '../store/actions/itemsActions';
+import actions from '../../store/actions/items';
+import styles from './styles';
 
 const { showItemInfoAction } = actions;
 const Item = ({ firstName, lastName, idx, id, email, date, avatar }) => {
   const dispatch = useDispatch();
-  
+
   const infoVisible = useSelector(state => state.itemsReducers.items[idx].infoVisible);
 
   const handlePressItem = () => {
@@ -36,27 +37,5 @@ const Item = ({ firstName, lastName, idx, id, email, date, avatar }) => {
     </TouchableOpacity>
   )
 };
-
-const styles = StyleSheet.create({
-  item: {
-    backgroundColor: '#f5f5f5',
-    padding: 20,
-    borderColor: 'grey',
-    borderWidth: 1,
-    marginVertical: 8,
-    marginHorizontal: 16,
-  },
-  content: {
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  title: {
-    fontSize: 16,
-  },
-  img: {
-    height: 50,
-    width: 50
-  }
-});
 
 export default Item;

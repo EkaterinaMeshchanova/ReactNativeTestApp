@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { FlatList } from 'react-native';
-import Item from './Item'
+import Item from '../Item'
 
 const List = () => {
   const renderItem = ({ item, index }) => (
