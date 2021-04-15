@@ -7,7 +7,7 @@ const List = () => {
   const renderItem = ({ item, index }) => (
     <Item 
       firstName={item.firstName} 
-      lastName={item.firstName} 
+      lastName={item.lastName} 
       id={item.id} 
       idx={index}  
       email={item.email}
